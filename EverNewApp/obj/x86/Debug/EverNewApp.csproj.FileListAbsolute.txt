@@ -1,0 +1,400 @@
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\xrptOutGujInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPendingOrderListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptGujInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptStatement.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlipsOnInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptChallenListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptChallen.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptOrderListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPaymentListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlip.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyBalSummary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptCustomerBalSummary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\x_rptInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptStock.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptAccount.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptProductListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptProduct.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptSummary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\xrptOutGujInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPendingOrderListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptGujInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptStatement.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlipsOnInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptChallenListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptChallen.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptOrderListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPaymentListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlip.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyBalSummary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptCustomerBalSummary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\x_rptInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptStock.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptAccount.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptProductListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptProduct1.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptSummary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe.config
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\EverNewApp.pdb
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAllItemWiseQty.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageCompany.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPartyWiseQty.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPendingOrder.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmChallen.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageExpenseTransaction.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateExpenseTransaction.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageExpenseMaster.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateExpenseMaster.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmCompanySelection.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageChallen.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateChallen.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddFullProduct.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateCompany.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePackingSlip.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePurchasePayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdatePurchasePayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageBank.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateBank.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPackingSlip.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPrintBill.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStock.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageSale.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateSale.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmDashBoard.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateAccount.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdatePurchase.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageProductItem.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Form1.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProduct.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProductItem.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProductSize.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageItem.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageProductSize.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePurchase.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageStockIn.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmMangeAccount.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmOrder.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockIn.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmUser.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmUserLogin.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.MDIMaster.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAccountStatement.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmChallenList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmOrderList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPaymentList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmPartyBalance.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmCustomerBalance.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockReporting.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSaleList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAccount.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPurchaseList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmProductListing.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmReportViwer.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Properties.Resources.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csproj.GenerateResource.Cache
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.exe
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.pdb
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csprojResolveAssemblyReference.cache
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateworkar.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageLoan.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateLoan.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateSalary.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageSalary.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageLoanPayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateLoanPayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptSalary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\bin\Debug\Report\rptSalary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\Raghuveer\Projects\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSalaryList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptplProduction.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseItemList.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleItemReport.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptProduction.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStockReportListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing2.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyStatement.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStockInListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptGST.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSalary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\xrptOutGujInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPendingOrderListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptGujInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStatement.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlipsOnInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptChallenListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptChallen.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptOrderListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPaymentListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlip.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyBalSummary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptCustomerBalSummary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\x_rptInvoice.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStock.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\ZrptSaleListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptAccount.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptProductListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptProduct.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseListing.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSummary.rpt
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptplProduction.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseItemList.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleItemReport.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptProduction.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStockReportListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing2.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyStatement.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStockInListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptGST.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSalary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\xrptOutGujInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPendingOrderListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptGujInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStatement.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlipsOnInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptChallenListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptChallen.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptOrderListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPaymentListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlip.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyBalSummary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptCustomerBalSummary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\x_rptInvoice.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptStock.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\ZrptSaleListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptAccount.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptProductListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptProduct1.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseListing.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\Report\rptSummary.cs
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe.config
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\bin\Debug\EverNewApp.pdb
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csprojResolveAssemblyReference.cache
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csproj.ResolveComReference.cache
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSMSHistory.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageLoanPayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateLoanPayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageSalary.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateSalary.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageLoan.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateLoan.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateworkar.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAllItemWiseQty.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageCompany.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPartyWiseQty.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPaymentReminder.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPendingOrder.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmChallen.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageExpenseTransaction.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateExpenseTransaction.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageExpenseMaster.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateExpenseMaster.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmCompanySelection.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageChallen.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateChallen.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddFullProduct.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateCompany.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePurchasePayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdatePurchasePayment.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageBank.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateBank.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPrintBill.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStock.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageSale.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateSale.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmDashBoard.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateAccount.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdatePurchase.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageProductItem.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Form1.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProductItem.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProductSize.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageProductSize.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePurchase.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageStockIn.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmMangeAccount.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmOrder.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockIn.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmUser.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmUserLogin.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.MDIMaster.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmProductionPLWiseReport.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPurchaseItemList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSaleItemList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmProductionReport.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmGSTReport.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPartyStatement.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockInList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmGSTList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSalaryList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAccountStatement.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmChallenList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmOrderList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPaymentList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmPartyBalance.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmCustomerBalance.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockReporting.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSaleList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAccount.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPurchaseList.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmProductListing.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmReportViwer.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Properties.Resources.resources
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csproj.GenerateResource.Cache
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.exe
+F:\WORKS\SOFTWARE DEVELOPMENTS\GST\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.pdb
+D:\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe.config
+D:\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csproj.ResolveComReference.cache
+D:\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.exe
+D:\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.pdb
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptplProduction.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseItemList.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleItemReport.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptProduction.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStockReportListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing2.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyStatement.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStockInListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptGST.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSalary.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\xrptOutGujInvoice.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPendingOrderListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptInvoice.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptGujInvoice.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStatement.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlipsOnInvoice.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptChallenListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptChallen.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptOrderListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPaymentListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlip.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyBalSummary.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptCustomerBalSummary.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\x_rptInvoice.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStock.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\ZrptSaleListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptAccount.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptProductListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptProduct.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseListing.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSummary.rpt
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptplProduction.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseItemList.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleItemReport.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptProduction.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStockReportListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSaleListing2.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyStatement.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStockInListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptGST.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSalary.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\xrptOutGujInvoice.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPendingOrderListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptInvoice.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptGujInvoice.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStatement.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlipsOnInvoice.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptChallenListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptChallen.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptOrderListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPaymentListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPackingSlip.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPartyBalSummary.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptCustomerBalSummary.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\x_rptInvoice.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptStock.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\ZrptSaleListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptAccount.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptProductListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptProduct1.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptPurchaseListing.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\Report\rptSummary.cs
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe.config
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\EverNewApp.exe
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\bin\Debug\EverNewApp.pdb
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csproj.ResolveComReference.cache
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSMSHistory.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageLoanPayment.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateLoanPayment.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageSalary.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateSalary.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageLoan.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateLoan.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateworkar.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAllItemWiseQty.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageCompany.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPartyWiseQty.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPaymentReminder.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPendingOrder.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmChallen.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageExpenseTransaction.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateExpenseTransaction.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageExpenseMaster.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateExpenseMaster.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmCompanySelection.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageChallen.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateChallen.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddFullProduct.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateCompany.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePurchasePayment.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdatePurchasePayment.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageBank.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateBank.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPrintBill.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStock.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageSale.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateSale.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmDashBoard.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateAccount.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdatePurchase.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageProductItem.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Form1.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProductItem.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAddUpdateProductSize.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageProductSize.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManagePurchase.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmManageStockIn.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmMangeAccount.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmOrder.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockIn.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmUser.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmUserLogin.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.MDIMaster.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmProductionPLWiseReport.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPurchaseItemList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSaleItemList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmProductionReport.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmGSTReport.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPartyStatement.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockInList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmGSTList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSalaryList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAccountStatement.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmChallenList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmOrderList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPaymentList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmPartyBalance.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmCustomerBalance.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmStockReporting.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmSaleList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmAccount.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.frmPurchaseList.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmProductListing.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Report.frmReportViwer.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.Properties.Resources.resources
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csproj.GenerateResource.Cache
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.exe
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.pdb
+C:\vignshT\pradeep\appunzip\appunzip\EverNewApp\EverNewApp\obj\x86\Debug\EverNewApp.csprojResolveAssemblyReference.cache

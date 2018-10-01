@@ -1,0 +1,1556 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GST_Invoice_DB" Class="MyDabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.101.12;Initial Catalog=GST_Invoice_DB;Integrated Security=True" SettingsObjectName="EverNewApp.Properties.Settings" SettingsPropertyName="GST_Invoice_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TL01_USER" Member="TL01_USERs">
+    <Type Name="TL01_USER">
+      <Column Name="TL01_USERID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TL01_PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TL01_ROLE" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TL01_ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_COMPANY" Member="TM_COMPANies">
+    <Type Name="TM_COMPANY">
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TM_NAME" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_PHONENO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_EMAIL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TM_BANK" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_BRANCH" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_IFSC" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_ACCOUNTNO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_TINNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_IMAGE" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TM_ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.USP_RP_PRODUCTION_REPORT" Method="USP_RP_PRODUCTION_REPORT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_RP_PRODUCTION_REPORTResult">
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T005_QTY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T005_WEIGHT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T005_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_RPT_GETPRODUCT" Method="USP_VP_RPT_GETPRODUCT">
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_RPT_GETPRODUCTResult">
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_RPT_GET_PURCHASE_ITEMS" Method="USP_RPT_GET_PURCHASE_ITEMS">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_RPT_GET_PURCHASE_ITEMSResult">
+      <Column Name="T003_PURCHASEITEMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T002_PURCHASEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T003_QTY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T003_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T002_PURCHASEID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T002_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T002_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T002_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX1RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX1AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX2RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX2AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX3RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX3AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_PLACE_OF_SUPPLY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_RPT_GET_PURCHASELIST" Method="USP_RPT_GET_PURCHASELIST">
+    <Parameter Name="T002_PURCHASEID" Parameter="t002_PURCHASEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T002_DATE" Parameter="t002_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_RPT_GET_PURCHASELISTResult">
+      <Column Name="T002_PURCHASEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T002_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T002_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T002_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX1RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX1AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX2RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX2AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX3RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX3AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="List_Output" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T003_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_QTY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T003_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TOTALCGST" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="TOTALSGST" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="TOTALIGST" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="TOTALNETAMOUNT" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_RPT_GET_SALE_ITEM_REPORT" Method="USP_RPT_GET_SALE_ITEM_REPORT">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_RPT_GET_SALE_ITEM_REPORTResult">
+      <Column Name="T008_SALEITEMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T007_SALEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T008_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T008_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T008_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T008_NET_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_SALEID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_LR1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_LR2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_PACKING" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_TAXABLE_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_CGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_SGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_IGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_VEHICLE_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_IS_REVERSE_CHARGES" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="T007_REVERSE_CHARGE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_E_WAY_BILL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_SHIPPED_TO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_PLACE_OF_SUPPLY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_LR_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T007_INVOICE_PREFIX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_TOTAL_KG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_RPT_GETSALELIST" Method="USP_RPT_GETSALELIST">
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_DATE" Parameter="t007_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_RPT_GETSALELISTResult">
+      <Column Name="T007_SALEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_NO" Type="System.String" DbType="NVarChar(61)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T007_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_LR1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T007_CGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_SGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_IGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T008_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T008_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T008_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T008_NET_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TOTALCGST" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TOTALSGST" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TOTALIGST" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TOTAL_NET" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_RPT_MONTH_SUMMARY" Method="USP_RPT_MONTH_SUMMARY">
+    <Parameter Name="MONTH" Parameter="mONTH" Type="System.Int32" DbType="Int" />
+    <Parameter Name="YEAR" Parameter="yEAR" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_RPT_MONTH_SUMMARYResult">
+      <Column Name="T007_NETAMOUNT" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_UPDATE_BANK_BAL" Method="USP_UPDATE_BANK_BAL">
+    <Parameter Name="TM04_BANKID" Parameter="tM04_BANKID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADD_PRODUCT" Method="USP_VP_ADD_PRODUCT">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_NAME" Parameter="tM01_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM01_ISSET" Parameter="tM01_ISSET" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TM01_HSNCODE" Parameter="tM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_PRICE" Parameter="tM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID_OUT" Parameter="tM01_PRODUCTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDPDATE_SALEITEM" Method="USP_VP_ADDPDATE_SALEITEM">
+    <Parameter Name="T008_SALEITEMID" Parameter="t008_SALEITEMID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T008_QTY" Parameter="t008_QTY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T008_RATE" Parameter="t008_RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T008_UNIT" Parameter="t008_UNIT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T008_NET_AMOUNT" Parameter="t008_NET_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T008_SALEITEMID_OUT" Parameter="t008_SALEITEMID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPATE_CHALLEN" Method="USP_VP_ADDUPATE_CHALLEN">
+    <Parameter Name="T012_CHALLENID" Parameter="t012_CHALLENID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_NO" Parameter="t012_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T012_DATE" Parameter="t012_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T012_TRANSPORT1" Parameter="t012_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T012_LR1" Parameter="t012_LR1" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T012_TRANSPORT2" Parameter="t012_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T012_LR2" Parameter="t012_LR2" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T012_TOTAL_AMT" Parameter="t012_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_PACKING" Parameter="t012_PACKING" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_FREIGHT" Parameter="t012_FREIGHT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_OTHER_EXPENSE" Parameter="t012_OTHER_EXPENSE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_DISCOUNT" Parameter="t012_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_TAX" Parameter="t012_TAX" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_NETAMOUNT" Parameter="t012_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_DETAILS" Parameter="t012_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_CHALLENID_OUT" Parameter="t012_CHALLENID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_ACCOUNT" Method="USP_VP_ADDUPDATE_ACCOUNT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_NAME" Parameter="t001_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T001_CONTACT_PERSON" Parameter="t001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T001_ADDRESS1" Parameter="t001_ADDRESS1" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="T001_ADDRESS2" Parameter="t001_ADDRESS2" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="T001_TYPE" Parameter="t001_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_CITY" Parameter="t001_CITY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_STATEID" Parameter="tM_STATEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_MOBILE1" Parameter="t001_MOBILE1" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="T001_MOBILE2" Parameter="t001_MOBILE2" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="T001_PHONE" Parameter="t001_PHONE" Type="System.String" DbType="NVarChar(25)" />
+    <Parameter Name="T001_EMAIL" Parameter="t001_EMAIL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_OPENINGBAL" Parameter="t001_OPENINGBAL" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T001_GSTTIN" Parameter="t001_GSTTIN" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_TIN" Parameter="t001_TIN" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_DISCOUNT" Parameter="t001_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID_OUT" Parameter="t001_ACCOUNTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_BANK" Method="USP_VP_ADDUPDATE_BANK">
+    <Parameter Name="TM04_BANKID" Parameter="tM04_BANKID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM04_NAME" Parameter="tM04_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM04_ACCONT_NAME" Parameter="tM04_ACCONT_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM04_IFSCCODE" Parameter="tM04_IFSCCODE" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM04_BRANCH" Parameter="tM04_BRANCH" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM04_DETAILS" Parameter="tM04_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM04_BANKID_OUT" Parameter="tM04_BANKID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_CHALLEN_ITEM" Method="USP_VP_ADDUPDATE_CHALLEN_ITEM" IsComposable="true">
+    <Parameter Name="T012_CHALLENITEMID" Parameter="t012_CHALLENITEMID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_CHALLENID" Parameter="t012_CHALLENID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM02_PRODUCTSIZEID" Parameter="tM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_QTY" Parameter="t012_QTY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_RATE" Parameter="t012_RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_TOTAL_AMT" Parameter="t012_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_DISCOUNT_PER" Parameter="t012_DISCOUNT_PER" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_DISCOUNT_AMT" Parameter="t012_DISCOUNT_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_TAX_RATE" Parameter="t012_TAX_RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_TAX_AMT" Parameter="t012_TAX_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T012_NET_AMOUNT" Parameter="t012_NET_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_CHALLENITEMID_OUT" Parameter="t012_CHALLENITEMID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_EXPENSE" Method="USP_VP_ADDUPDATE_EXPENSE">
+    <Parameter Name="TM05_EXPENSEID" Parameter="tM05_EXPENSEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM05_EXPENSE" Parameter="tM05_EXPENSE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM05_EXPENSEID_OUT" Parameter="tM05_EXPENSEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_EXPENSE_TRANSACTION" Method="USP_VP_ADDUPDATE_EXPENSE_TRANSACTION">
+    <Parameter Name="T013_EXPENSETRANSACATIONID" Parameter="t013_EXPENSETRANSACATIONID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM05_EXPENSEID" Parameter="tM05_EXPENSEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T013_DATE" Parameter="t013_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T013_AMOUNT" Parameter="t013_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T013_DETAILS" Parameter="t013_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T013_EXPENSETRANSACATIONID_OUT" Parameter="t013_EXPENSETRANSACATIONID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_LOAN" Method="USP_VP_ADDUPDATE_LOAN">
+    <Parameter Name="T15_LOANID" Parameter="t15_LOANID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T14_DATE" Parameter="t14_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T14_AMOUNT" Parameter="t14_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T14_DETAILS" Parameter="t14_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T15_LOANID_OUT" Parameter="t15_LOANID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_ORDER" Method="USP_VP_ADDUPDATE_ORDER">
+    <Parameter Name="T004_ORDERID" Parameter="t004_ORDERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T004_DATE" Parameter="t004_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM02_PRODUCTSIZEID" Parameter="tM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T004_QTY" Parameter="t004_QTY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T004_IS_URGENT" Parameter="t004_IS_URGENT" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="T004_DETAILS" Parameter="t004_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T004_ORDERID_OUT" Parameter="t004_ORDERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PACKING_SLIP" Method="USP_VP_ADDUPDATE_PACKING_SLIP">
+    <Parameter Name="T010_PACKINGSLIPID" Parameter="t010_PACKINGSLIPID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T010_NO" Parameter="t010_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T010_DATE" Parameter="t010_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T010_TRANSPORT" Parameter="t010_TRANSPORT" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T010_LRNO" Parameter="t010_LRNO" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T010_PACKINGSLIPID_OUT" Parameter="t010_PACKINGSLIPID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PACKINGSLIPORDER" Method="USP_VP_ADDUPDATE_PACKINGSLIPORDER">
+    <Parameter Name="T011_PACKINGSLIPORDERID" Parameter="t011_PACKINGSLIPORDERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T010_PACKINGSLIPID" Parameter="t010_PACKINGSLIPID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T004_ORDERID" Parameter="t004_ORDERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T011_QTY" Parameter="t011_QTY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T011_PACKINGSLIPORDERID_OUT" Parameter="t011_PACKINGSLIPORDERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PAYMENT" Method="USP_VP_ADDUPDATE_PAYMENT">
+    <Parameter Name="T009_PURCHASEPAYMENTID" Parameter="t009_PURCHASEPAYMENTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T009_DATE" Parameter="t009_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T009_TYPE" Parameter="t009_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T009_PAYMENT_TYPE" Parameter="t009_PAYMENT_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM04_BANKID" Parameter="tM04_BANKID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T009_AMOUNT" Parameter="t009_AMOUNT" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM04_DETAILS" Parameter="tM04_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T009_PURCHASEPAYMENTID_OUT" Parameter="t009_PURCHASEPAYMENTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PRODUCT" Method="USP_VP_ADDUPDATE_PRODUCT">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_NAME" Parameter="tM01_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM01_ISSET" Parameter="tM01_ISSET" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TM01_HSNCODE" Parameter="tM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_PRICE" Parameter="tM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID_OUT" Parameter="tM01_PRODUCTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PRODUCTITEM" Method="USP_VP_ADDUPDATE_PRODUCTITEM">
+    <Parameter Name="TM03_PRODUCTITEMID" Parameter="tM03_PRODUCTITEMID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_MAIN_PRODUCTID" Parameter="tM01_MAIN_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM03_QTY" Parameter="tM03_QTY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM03_PRODUCTITEMID_OUT" Parameter="tM03_PRODUCTITEMID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PRODUCTSIZE" Method="USP_VP_ADDUPDATE_PRODUCTSIZE">
+    <Parameter Name="TM02_PRODUCTSIZEID" Parameter="tM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM02_SIZE" Parameter="tM02_SIZE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM02_PRICE" Parameter="tM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM02_PRODUCTSIZEID_OUT" Parameter="tM02_PRODUCTSIZEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PURCHASE" Method="USP_VP_ADDUPDATE_PURCHASE">
+    <Parameter Name="T002_PURCHASEID" Parameter="t002_PURCHASEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T002_NO" Parameter="t002_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T002_DATE" Parameter="t002_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T002_TOTAL_AMT" Parameter="t002_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_DISCOUNT" Parameter="t002_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_TAX1RATE" Parameter="t002_TAX1RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_TAX1AMOUNT" Parameter="t002_TAX1AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_TAX2RATE" Parameter="t002_TAX2RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_TAX2AMOUNT" Parameter="t002_TAX2AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_TAX3RATE" Parameter="t002_TAX3RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_TAX3AMOUNT" Parameter="t002_TAX3AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_NETAMOUNT" Parameter="t002_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T002_DETAILS" Parameter="t002_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_PLACE_OF_SUPPLY" Parameter="t007_PLACE_OF_SUPPLY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T002_PURCHASEID_OUT" Parameter="t002_PURCHASEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_PURCHASEITEM" Method="USP_VP_ADDUPDATE_PURCHASEITEM">
+    <Parameter Name="T003_PURCHASEITEMID" Parameter="t003_PURCHASEITEMID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T002_PURCHASEID" Parameter="t002_PURCHASEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T003_QTY" Parameter="t003_QTY" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T003_UNIT" Parameter="t003_UNIT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T003_RATE" Parameter="t003_RATE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T003_AMOUNT" Parameter="t003_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T003_NETAMOUNT" Parameter="t003_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T003_PURCHASEITEMID_OUT" Parameter="t003_PURCHASEITEMID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_SALE" Method="USP_VP_ADDUPDATE_SALE">
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_TYPE" Parameter="t007_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_NO" Parameter="t007_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_DATE" Parameter="t007_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T007_TRANSPORT1" Parameter="t007_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T007_LR1" Parameter="t007_LR1" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T007_TRANSPORT2" Parameter="t007_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T007_LR2" Parameter="t007_LR2" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T007_TOTAL_AMT" Parameter="t007_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_PACKING" Parameter="t007_PACKING" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_DISCOUNT" Parameter="t007_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_TAXABLE_AMT" Parameter="t007_TAXABLE_AMT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_CGST" Parameter="t007_CGST" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_SGST" Parameter="t007_SGST" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_IGST" Parameter="t007_IGST" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_NETAMOUNT" Parameter="t007_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_DETAILS" Parameter="t007_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_VEHICLE_NO" Parameter="t007_VEHICLE_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_IS_REVERSE_CHARGES" Parameter="t007_IS_REVERSE_CHARGES" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="T007_REVERSE_CHARGE" Parameter="t007_REVERSE_CHARGE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T007_E_WAY_BILL" Parameter="t007_E_WAY_BILL" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_SHIPPED_TO_ID" Parameter="t007_SHIPPED_TO_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_PLACE_OF_SUPPLY" Parameter="t007_PLACE_OF_SUPPLY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_LR_DATE" Parameter="t007_LR_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T007_INVOICE_PREFIX" Parameter="t007_INVOICE_PREFIX" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_TOTAL_KG" Parameter="t007_TOTAL_KG" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_SALEID_OUT" Parameter="t007_SALEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_STOCK_IN" Method="USP_VP_ADDUPDATE_STOCK_IN">
+    <Parameter Name="T005_STOCKINID" Parameter="t005_STOCKINID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_STOCKINMASTERID" Parameter="t007_STOCKINMASTERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T005_QTY" Parameter="t005_QTY" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T005_UNIT" Parameter="t005_UNIT" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T005_TYPE" Parameter="t005_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T005_WEIGHT" Parameter="t005_WEIGHT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T005_STOCKINID_OUT" Parameter="t005_STOCKINID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_STOCK_MASTER" Method="USP_VP_ADDUPDATE_STOCK_MASTER">
+    <Parameter Name="T007_STOCKINMASTERID" Parameter="t007_STOCKINMASTERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_DATE" Parameter="t007_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_DETAILS" Parameter="t007_DETAILS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_STOCKINMASTERID_OUT" Parameter="t007_STOCKINMASTERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_WORKAR_PAYMENT" Method="USP_VP_ADDUPDATE_WORKAR_PAYMENT">
+    <Parameter Name="T017_WORKAR_PAYMENTID" Parameter="t017_WORKAR_PAYMENTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T017_DATE" Parameter="t017_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T017_AMOUNT" Parameter="t017_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T017_DETAILS" Parameter="t017_DETAILS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T017_WORKAR_PAYMENTID_OUT" Parameter="t017_WORKAR_PAYMENTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATE_WORKER" Method="USP_VP_ADDUPDATE_WORKER">
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T14_NAME" Parameter="t14_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T14_ADDRESS" Parameter="t14_ADDRESS" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T14_PHONE_NO" Parameter="t14_PHONE_NO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T14_DAY_PRICE" Parameter="t14_DAY_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T14_HOURS_PRICE" Parameter="t14_HOURS_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T14_DETAILS" Parameter="t14_DETAILS" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T14_WORKERID_OUT" Parameter="t14_WORKERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_ADDUPDATES_SALARY" Method="USP_VP_ADDUPDATES_SALARY">
+    <Parameter Name="T16_SALARYID" Parameter="t16_SALARYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T16_DATE" Parameter="t16_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="T16_TOTAL_DAY" Parameter="t16_TOTAL_DAY" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T16_TOTAL_HOURS" Parameter="t16_TOTAL_HOURS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T16_DAY_PRICE" Parameter="t16_DAY_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T16_HOURS_PRICE" Parameter="t16_HOURS_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T16_NET_SALARY" Parameter="t16_NET_SALARY" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T16_LOAN_AMOUNT" Parameter="t16_LOAN_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="T16_DETAILS" Parameter="t16_DETAILS" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T16_SALARYID_OUT" Parameter="t16_SALARYID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_ACCOUNT" Method="USP_VP_DELETE_ACCOUNT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T001_ACCOUNTID_OUT" Parameter="t001_ACCOUNTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_ALL_PACKINGSLIPORDER" Method="USP_VP_DELETE_ALL_PACKINGSLIPORDER">
+    <Parameter Name="T010_PACKINGSLIPID" Parameter="t010_PACKINGSLIPID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T010_PACKINGSLIPID_OUT" Parameter="t010_PACKINGSLIPID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_CHALLEN" Method="USP_VP_DELETE_CHALLEN">
+    <Parameter Name="T012_CHALLENID" Parameter="t012_CHALLENID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_CHALLENID_OUT" Parameter="t012_CHALLENID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_CHALLENITEM" Method="USP_VP_DELETE_CHALLENITEM" IsComposable="true">
+    <Parameter Name="T012_CHALLENID" Parameter="t012_CHALLENID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T012_CHALLENID_OUT" Parameter="t012_CHALLENID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_ORDER" Method="USP_VP_DELETE_ORDER">
+    <Parameter Name="T004_ORDERID" Parameter="t004_ORDERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T004_ORDERID_OUT" Parameter="t004_ORDERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_PRODUCT" Method="USP_VP_DELETE_PRODUCT">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM01_PRODUCTID_OUT" Parameter="tM01_PRODUCTID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_PRODUCTITEM" Method="USP_VP_DELETE_PRODUCTITEM">
+    <Parameter Name="TM03_PRODUCTITEMID" Parameter="tM03_PRODUCTITEMID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM03_PRODUCTITEMID_OUT" Parameter="tM03_PRODUCTITEMID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_PRODUCTSIZE" Method="USP_VP_DELETE_PRODUCTSIZE">
+    <Parameter Name="TM02_PRODUCTSIZEID" Parameter="tM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TM02_PRODUCTSIZEID_OUT" Parameter="tM02_PRODUCTSIZEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_PURCHASE" Method="USP_VP_DELETE_PURCHASE">
+    <Parameter Name="T002_PURCHASEID" Parameter="t002_PURCHASEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T002_PURCHASEID_OUT" Parameter="t002_PURCHASEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_PURCHASE_ITEM" Method="USP_VP_DELETE_PURCHASE_ITEM">
+    <Parameter Name="T002_PURCHASEID" Parameter="t002_PURCHASEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T002_PURCHASEID_OUT" Parameter="t002_PURCHASEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_SALE" Method="USP_VP_DELETE_SALE">
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_SALEID_OUT" Parameter="t007_SALEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_SALEITEM" Method="USP_VP_DELETE_SALEITEM">
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_SALEID_OUT" Parameter="t007_SALEID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_STOCK_IN" Method="USP_VP_DELETE_STOCK_IN">
+    <Parameter Name="T007_STOCKINMASTERID" Parameter="t007_STOCKINMASTERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_STOCKINMASTERID_OUT" Parameter="t007_STOCKINMASTERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_DELETE_STOCK_MASTER" Method="USP_VP_DELETE_STOCK_MASTER">
+    <Parameter Name="T007_STOCKINMASTERID" Parameter="t007_STOCKINMASTERID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T007_STOCKINMASTERID_OUT" Parameter="t007_STOCKINMASTERID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_GET_ACCOUNT" Method="USP_VP_GET_ACCOUNT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T001_NAME" Parameter="t001_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T001_CONTACT_PERSON" Parameter="t001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T001_TYPE" Parameter="t001_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_CITY" Parameter="t001_CITY" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="T001_MOBILE1" Parameter="t001_MOBILE1" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_ACCOUNTResult">
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_MOBILE2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_PHONE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_OPENINGBAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T001_GSTTIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_TIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_STATEID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM_STATE_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATE_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_ALL_ITEM_ON_CHALLEN" Method="USP_VP_GET_ALL_ITEM_ON_CHALLEN">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_ALL_ITEM_ON_CHALLENResult">
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ChallenQty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_B2B_GSTR1_REPORT" Method="USP_VP_GET_B2B_GSTR1_REPORT">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_B2B_GSTR1_REPORTResult">
+      <Column Name="[GSTIN/UIN of Recipient]" Member="GSTIN_UIN_of_Recipient" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Receiver Name]" Member="Receiver_Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="[Invoice Number]" Member="Invoice_Number" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Invoice date]" Member="Invoice_date" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="[Invoice Value]" Member="Invoice_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Place Of Supply]" Member="Place_Of_Supply" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="[Reverse Charge]" Member="Reverse_Charge" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="[Invoice Type]" Member="Invoice_Type" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="[E-Commerce GSTIN]" Member="E_Commerce_GSTIN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="[Applicable % of Tax Rate]" Member="Applicable___of_Tax_Rate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Taxable Value]" Member="Taxable_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Cess Amount]" Member="Cess_Amount" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_B2B_GSTR2_REPORT" Method="USP_VP_GET_B2B_GSTR2_REPORT">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_B2B_GSTR2_REPORTResult">
+      <Column Name="[GSTIN of Supplier]" Member="GSTIN_of_Supplier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Invoice Number]" Member="Invoice_Number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Invoice date]" Member="Invoice_date" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="[Invoice Value]" Member="Invoice_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Place Of Supply]" Member="Place_Of_Supply" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="[Reverse Charge]" Member="Reverse_Charge" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Invoice Type]" Member="Invoice_Type" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="[Taxable Value]" Member="Taxable_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Integrated Tax Paid]" Member="Integrated_Tax_Paid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Central Tax Paid]" Member="Central_Tax_Paid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[State/UT Tax Paid]" Member="State_UT_Tax_Paid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Cess Paid]" Member="Cess_Paid" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Eligibility For ITC]" Member="Eligibility_For_ITC" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Availed ITC Integrated Tax]" Member="Availed_ITC_Integrated_Tax" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Availed ITC Central Tax]" Member="Availed_ITC_Central_Tax" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Availed ITC State/UT Tax]" Member="Availed_ITC_State_UT_Tax" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Availed ITC Cess]" Member="Availed_ITC_Cess" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_B2CL_GSTR1_REPORT" Method="USP_VP_GET_B2CL_GSTR1_REPORT">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_B2CL_GSTR1_REPORTResult">
+      <Column Name="[Invoice Number]" Member="Invoice_Number" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Invoice date]" Member="Invoice_date" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="[Invoice Value]" Member="Invoice_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Place Of Supply]" Member="Place_Of_Supply" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="[Applicable % of Tax Rate]" Member="Applicable___of_Tax_Rate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Taxable Value]" Member="Taxable_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Cess Amount]" Member="Cess_Amount" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[E-Commerce GSTIN]" Member="E_Commerce_GSTIN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_B2CS_GSTR1_REPORT" Method="USP_VP_GET_B2CS_GSTR1_REPORT">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_B2CS_GSTR1_REPORTResult">
+      <Column Name="Type" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="[Place Of Supply]" Member="Place_Of_Supply" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="[Applicable % of Tax Rate]" Member="Applicable___of_Tax_Rate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[Taxable Value]" Member="Taxable_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="[Cess Amount]" Member="Cess_Amount" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="[E-Commerce GSTIN]" Member="E_Commerce_GSTIN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_BANK" Method="USP_VP_GET_BANK">
+    <Parameter Name="TM04_BANKID" Parameter="tM04_BANKID" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM04_NAME" Parameter="tM04_NAME" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_BANKResult">
+      <Column Name="TM04_BANKID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM04_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM04_ACCONT_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM04_IFSCCODE" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM04_BRANCH" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM04_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_CUSTOMER_BAL_SUMMARY" Method="USP_VP_GET_CUSTOMER_BAL_SUMMARY">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_CUSTOMER_BAL_SUMMARYResult">
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TOTALSALE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="TOTALCASH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALBANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALPAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALPENDING" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_DOC" Method="USP_VP_GET_DOC">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_DOCResult">
+      <Column Name="[Nature of Document]" Member="Nature_of_Document" Type="System.String" DbType="VarChar(51) NOT NULL" CanBeNull="false" />
+      <Column Name="[Sr. No. From]" Member="Sr__No__From" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Sr No.To]" Member="Sr_No_To" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Total Number]" Member="Total_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cancelled" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_EXPENSE" Method="USP_VP_GET_EXPENSE">
+    <Parameter Name="TM05_EXPENSEID" Parameter="tM05_EXPENSEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM05_EXPENSE" Parameter="tM05_EXPENSE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_EXPENSEResult">
+      <Column Name="TM05_EXPENSEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM05_EXPENSE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_EXPENSETRANSACTION" Method="USP_VP_GET_EXPENSETRANSACTION">
+    <Parameter Name="TM05_EXPENSEID" Parameter="tM05_EXPENSEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_DATE" Parameter="t007_DATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_EXPENSETRANSACTIONResult">
+      <Column Name="T013_EXPENSETRANSACATIONID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM05_EXPENSEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T013_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T013_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T013_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM05_EXPENSE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_GST_REPORT" Method="USP_VP_GET_GST_REPORT">
+    <Parameter Name="T007_TYPE" Parameter="t007_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_GST_REPORTResult">
+      <Column Name="Invoice_Type" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceOfSupply" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="T007_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Cess_Amount" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="E_Commerce_GSTIN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_HSN_GSTR1_REPORT" Method="USP_VP_GET_HSN_GSTR1_REPORT" IsComposable="true">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.USP_VP_GET_HSN_GSTR2_REPORT" Method="USP_VP_GET_HSN_GSTR2_REPORT">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_HSN_GSTR2_REPORTResult">
+      <Column Name="HSN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="UQC" Type="System.String" DbType="VarChar(13)" CanBeNull="true" />
+      <Column Name="[Total Quantity]" Member="Total_Quantity" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Total Value]" Member="Total_Value" Type="System.Decimal" DbType="Decimal(36,2)" CanBeNull="true" />
+      <Column Name="[Taxable Value]" Member="Taxable_Value" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="[Integrated Tax Paid]" Member="Integrated_Tax_Paid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Central Tax Paid]" Member="Central_Tax_Paid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[State/UT Tax Paid]" Member="State_UT_Tax_Paid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Cess Amount]" Member="Cess_Amount" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_LOAN" Method="USP_VP_GET_LOAN">
+    <Parameter Name="T15_LOANID" Parameter="t15_LOANID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_LOANResult">
+      <Column Name="T15_LOANID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T14_WORKERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T14_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T14_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T14_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T14_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T14_PHONE_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T14_ADDRESS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_OPENING_BAL" Method="USP_VP_GET_OPENING_BAL">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DATE" Parameter="dATE" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_GET_ORDER" Method="USP_VP_GET_ORDER">
+    <Parameter Name="T004_ORDERID" Parameter="t004_ORDERID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_ORDERResult">
+      <Column Name="T004_ORDERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_IS_URGENT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="T004_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_ORDERLIST_FOR_PACKINGSLIP" Method="USP_VP_GET_ORDERLIST_FOR_PACKINGSLIP">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_ORDERLIST_FOR_PACKINGSLIPResult">
+      <Column Name="T004_ORDERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T004_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T004_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_PENDING_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_IS_COMPLITE" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="T004_IS_URGENT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_ORDERLIST_FOR_PACKINGSLIP_ON_ID" Method="USP_VP_GET_ORDERLIST_FOR_PACKINGSLIP_ON_ID">
+    <Parameter Name="T010_PACKINGSLIPID" Parameter="t010_PACKINGSLIPID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_ORDERLIST_FOR_PACKINGSLIP_ON_IDResult">
+      <Column Name="T004_ORDERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T004_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T004_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_PENDING_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_IS_COMPLITE" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="T004_IS_URGENT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PACKING_SLIP" Method="USP_VP_GET_PACKING_SLIP">
+    <Parameter Name="T010_PACKINGSLIPID" Parameter="t010_PACKINGSLIPID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T010_DATE" Parameter="t010_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PACKING_SLIPResult">
+      <Column Name="T010_PACKINGSLIPID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T010_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T010_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T010_TRANSPORT" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T010_LRNO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PANDING_ORDER" Method="USP_VP_GET_PANDING_ORDER">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(60)" />
+    <ElementType Name="USP_VP_GET_PANDING_ORDERResult">
+      <Column Name="QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Account_Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SALE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALPENDING" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PARTY_BAL_SUMMARY" Method="USP_VP_GET_PARTY_BAL_SUMMARY">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PARTY_BAL_SUMMARYResult">
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="TOTALPURCHASE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="TOTALCASH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALBANK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALPAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOTALPENDING" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PARTY_STATEMENT" Method="USP_VP_GET_PARTY_STATEMENT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PARTY_STATEMENTResult">
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Invoice_No" Type="System.String" DbType="NVarChar(563)" CanBeNull="true" />
+      <Column Name="Invoice_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sale_Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Recive_Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALSALE" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALPAYMENT" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PAYMENT" Method="USP_VP_GET_PAYMENT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T009_TYPE" Parameter="t009_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T009_PAYMENT_TYPE" Parameter="t009_PAYMENT_TYPE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T009_DATE" Parameter="t009_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PAYMENTResult">
+      <Column Name="T009_PAYMENTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T009_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T009_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T009_PAYMENT_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM04_BANKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T009_AMOUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM04_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CREDIT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEBIT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PRINT_PACKING_SLIP_ONID" Method="USP_VP_GET_PRINT_PACKING_SLIP_ONID">
+    <Parameter Name="T010_PACKINGSLIPID" Parameter="t010_PACKINGSLIPID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PRINT_PACKING_SLIP_ONIDResult">
+      <Column Name="T011_PACKINGSLIPORDERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T010_PACKINGSLIPID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_ORDERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T011_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T010_PACKINGSLIPID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T010_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T010_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T010_TRANSPORT" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T010_LRNO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_ORDERID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_PENDING_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T004_IS_URGENT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="T004_IS_COMPLITE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="T004_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_ACCOUNTID2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_MOBILE2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_PHONE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_OPENINGBAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T001_GSTTIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_TIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_PRODUCTSIZEID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_PRODUCTID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PRODUCT" Method="USP_VP_GET_PRODUCT">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_NAME" Parameter="tM01_NAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_ISSET" Parameter="tM01_ISSET" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PRODUCTResult">
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PRODUCT_FOR_CHALLEN_ON_ID" Method="USP_VP_GET_PRODUCT_FOR_CHALLEN_ON_ID">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PRODUCT_FOR_CHALLEN_ON_IDResult">
+      <Column Name="T006_STOCK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PRODUCT_FOR_CHALLEN_ON_NO" Method="USP_VP_GET_PRODUCT_FOR_CHALLEN_ON_NO">
+    <ElementType Name="USP_VP_GET_PRODUCT_FOR_CHALLEN_ON_NOResult">
+      <Column Name="T006_STOCK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PRODUCT_SIZE" Method="USP_VP_GET_PRODUCT_SIZE">
+    <Parameter Name="TM02_PRODUCTSIZEID" Parameter="tM02_PRODUCTSIZEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM02_SIZE" Parameter="tM02_SIZE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM02_PRICE" Parameter="tM02_PRICE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PRODUCT_SIZEResult">
+      <Column Name="TM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PRODUCTITEM" Method="USP_VP_GET_PRODUCTITEM">
+    <Parameter Name="TM03_PRODUCTITEMID" Parameter="tM03_PRODUCTITEMID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_MAIN_PRODUCTID" Parameter="tM01_MAIN_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM03_QTY" Parameter="tM03_QTY" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PRODUCTITEMResult">
+      <Column Name="TM03_PRODUCTITEMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_MAIN_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM03_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_PURCHASELIST" Method="USP_VP_GET_PURCHASELIST">
+    <Parameter Name="T002_PURCHASEID" Parameter="t002_PURCHASEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T002_DATE" Parameter="t002_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_PURCHASELISTResult">
+      <Column Name="T002_PURCHASEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T002_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T002_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T002_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX1RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX1AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX2RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX2AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX3RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_TAX3AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T002_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="List_Output" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_SALARY" Method="USP_VP_GET_SALARY">
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_SALARYResult">
+      <Column Name="T16_SALARYID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T14_WORKERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T16_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T16_TOTAL_DAY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T16_TOTAL_HOURS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T16_DAY_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T16_HOURS_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T16_NET_SALARY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T16_LOAN_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T16_DETAILS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T14_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T14_PHONE_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_STATEMENT" Method="USP_VP_GET_STATEMENT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_STATEMENTResult">
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Invoice_No" Type="System.String" DbType="NVarChar(562)" CanBeNull="true" />
+      <Column Name="Invoice_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Transport" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Parcel" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Sale_Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Recive_Amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALSALE" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTALPAYMENT" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_STOCK" Method="USP_VP_GET_STOCK">
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM02_PRODUCTSIZEID" Parameter="tM02_PRODUCTSIZEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_STOCKResult">
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T006_STOCK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T006_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_STOCK_IN_LISTING" Method="USP_VP_GET_STOCK_IN_LISTING">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_STOCK_IN_LISTINGResult">
+      <Column Name="T007_STOCKINMASTERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="[IN]" Member="IN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OUT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T005_WEIGHT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T005_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_STOCK_IN_REPORT" Method="USP_VP_GET_STOCK_IN_REPORT">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_STOCK_IN_REPORTResult">
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="[IN]" Member="IN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OUT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T005_WEIGHT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_STOCK_MASTER" Method="USP_VP_GET_STOCK_MASTER">
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_STOCK_MASTERResult">
+      <Column Name="T007_STOCKINMASTERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_DETAILS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="List_Output" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_STOCK_REPORT" Method="USP_VP_GET_STOCK_REPORT">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_STOCK_REPORTResult">
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IGST" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CGST" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SGST" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="P_IGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="P_CGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="P_SGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_TOTAL_ITEM_ON_CHALLEN" Method="USP_VP_GET_TOTAL_ITEM_ON_CHALLEN">
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM01_PRODUCTID" Parameter="tM01_PRODUCTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_TOTAL_ITEM_ON_CHALLENResult">
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T012_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ChallenQty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_WORKAR" Method="USP_VP_GET_WORKAR">
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_WORKARResult">
+      <Column Name="T14_WORKERID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T14_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T14_ADDRESS" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T14_PHONE_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T14_DAY_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T14_HOURS_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T14_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GET_WORKAR_PAYMENT" Method="USP_VP_GET_WORKAR_PAYMENT">
+    <Parameter Name="T14_WORKERID" Parameter="t14_WORKERID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_WORKAR_PAYMENTResult">
+      <Column Name="T017_WORKAR_PAYMENTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T14_WORKERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T017_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T017_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T017_DETAILS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T14_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GETCHALLENLIST" Method="USP_VP_GETCHALLENLIST">
+    <Parameter Name="T012_CHALLENID" Parameter="t012_CHALLENID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T012_DATE" Parameter="t012_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GETCHALLENLISTResult">
+      <Column Name="T012_CHALLENID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T012_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T012_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T012_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_TAX" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T012_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_LR1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_GETSALELIST" Method="USP_VP_GETSALELIST">
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_ACCOUNTID" Parameter="t001_ACCOUNTID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T007_DATE" Parameter="t007_DATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FROMDATE" Parameter="fROMDATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TODATE" Parameter="tODATE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TM_COMPAYID" Parameter="tM_COMPAYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GETSALELISTResult">
+      <Column Name="T007_SALEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_NO" Type="System.String" DbType="NVarChar(61)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T007_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_LR1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T007_CGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_SGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_IGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="List_Output" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_PRINT_CHALLEN_BILL" Method="USP_VP_PRINT_CHALLEN_BILL">
+    <Parameter Name="T012_CHALLENID" Parameter="t012_CHALLENID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_PRINT_CHALLEN_BILLResult">
+      <Column Name="T012_CHALLENID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T012_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T012_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T012_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_LR1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_LR2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T012_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_PACKING" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_FREIGHT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_OTHER_EXPENSE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_TAX" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T012_CHALLENITEMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T012_CHALLENID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_PRODUCTSIZEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T012_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T012_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_TOTAL_AMT1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_DISCOUNT_PER" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_DISCOUNT_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_TAX_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_TAX_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T012_NET_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_ACCOUNTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_MOBILE2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_PHONE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_OPENINGBAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T001_GSTTIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_TIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_PRODUCTSIZEID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_PRODUCTID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM02_SIZE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM02_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_COMPAYID5" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM_NAME" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_PHONENO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_EMAIL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TM_BANK" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_BRANCH" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_IFSC" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_ACCOUNTNO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_TINNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_IMAGE" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="TM_ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BILLTYPE" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_PRINT_SALE_BILL" Method="USP_VP_PRINT_SALE_BILL">
+    <Parameter Name="T007_SALEID" Parameter="t007_SALEID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_PRINT_SALE_BILLResult">
+      <Column Name="T007_SALEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_ACCOUNTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_LR1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_TRANSPORT2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_LR2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T007_TOTAL_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_PACKING" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_TAXABLE_AMT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_CGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_SGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_IGST" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_NETAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_DETAILS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_VEHICLE_NO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_IS_REVERSE_CHARGES" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="T007_REVERSE_CHARGE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T007_E_WAY_BILL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_SHIPPED_TO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_PLACE_OF_SUPPLY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T007_LR_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="T007_INVOICE_PREFIX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T007_TOTAL_KG" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T008_SALEITEMID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T007_SALEID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T008_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T008_RATE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T008_UNIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T008_NET_AMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_ACCOUNTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS2" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_CITY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_MOBILE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_MOBILE2" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_PHONE" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_OPENINGBAL" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T001_GSTTIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_TIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_STATEID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM_STATE_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATE_CODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRODUCTID1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM01_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM01_ISSET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TM01_HSNCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM01_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_COMPAYID4" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM_NAME" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_ADDRESS1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TM_PHONENO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_EMAIL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TM_BANK" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_BRANCH" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_IFSC" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_ACCOUNTNO" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TM_TINNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_IMAGE" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="TM_ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="T001_ACCOUNTID2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T001_NAME1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_CONTACT_PERSON1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS11" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_ADDRESS21" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="T001_TYPE1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_CITY1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATEID2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T001_MOBILE11" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_MOBILE21" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_PHONE1" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="T001_EMAIL1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_OPENINGBAL1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="T001_GSTTIN1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_TIN1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="T001_DISCOUNT1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TM_COMPAYID5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TM_STATEID3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TM_STATE_NAME1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TM_STATE_CODE1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BILLTYPE" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HSNCODE1" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HSNCODEQTY1" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HSNCODE2" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HSNCODEQTY2" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HSNCODE3" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="HSNCODEQTY3" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_VP_ADDSMS" Method="USP_VP_ADDSMS">
+    <Parameter Name="SMSID" Parameter="sMSID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SMS_Date" Parameter="sMS_Date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Msg" Parameter="msg" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="IsSend" Parameter="isSend" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="T001_COMPANYID" Parameter="t001_COMPANYID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SMSID_OUT" Parameter="sMSID_OUT" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_VP_GET_SMS" Method="USP_VP_GET_SMS">
+    <Parameter Name="SMS_Date" Parameter="sMS_Date" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="IsSend" Parameter="isSend" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="T001_COMPANYID" Parameter="t001_COMPANYID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_VP_GET_SMSResult">
+      <Column Name="SMSID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SMS_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Msg" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IsSend" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
